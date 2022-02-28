@@ -3,7 +3,7 @@ from rest_framework import generics
 from .models import Room
 from .serializers import RoomSerializer
 
-class RoomView(generics.CreateAPIView):
-    querySet = Room.objects.all()
+class RoomView(generics.ListAPIView):
+    queryset = Room.objects.all()
     serializer_class = RoomSerializer
 
